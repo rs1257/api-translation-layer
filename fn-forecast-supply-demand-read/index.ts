@@ -7,8 +7,6 @@ import httpTriggerErrorWrapper from "../shared/httpTriggerErrorWrapper";
 const httpTrigger: AzureFunction = async function (
   context: Context
 ): Promise<void> {
-  context.log("HTTP trigger function processed a request.");
-
   const {
     data: { data },
   } = await axios.get(
